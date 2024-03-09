@@ -44,7 +44,7 @@ class MovieRecommender:
         return top_recommendations
 
     def get_recommendations_tfidf(self, user_input, num_recommendations=5):
-        # Sample dataset (Replace this with your actual dataset loading code)
+       
         df = pd.read_csv(r'C:\Users\pv437\Desktop\Data Scince Folder\Projects\Project 3\EDA\netflix_Clusters.csv', encoding='latin1')
 
         # Preprocess the text
@@ -80,7 +80,7 @@ class MovieRecommender:
         return recommendations
 
     def get_movie_image(self, title):
-        api_key = '41718a96'  # Replace with your actual OMDB API key
+        api_key = '41718a96' 
         url = f"http://www.omdbapi.com/?apikey={api_key}&t={title}"
         response = requests.get(url)
         data = response.json()
@@ -91,7 +91,7 @@ class MovieRecommender:
             return None
 
     def get_movie_details(self, title):
-        api_key = '41718a96'  # Replace with your actual OMDB API key
+        api_key = '41718a96' 
         url = f"http://www.omdbapi.com/?apikey={api_key}&t={title}"
         response = requests.get(url)
         data = response.json()
